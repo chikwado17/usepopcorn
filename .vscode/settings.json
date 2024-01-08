@@ -1,0 +1,12 @@
+{
+  "editor.codeActionsOnSave": {},
+  "files.autoSave": "onFocusChange",
+  "editor.fontSize": 16,
+  "window.zoomLevel": 1,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"]
+}
