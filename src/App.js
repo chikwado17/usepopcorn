@@ -70,6 +70,15 @@ export default function App() {
     setSelectedId(null);
   };
 
+  //function to add watched movies
+  const handleAddWatched = (movie) => {
+    setWatched((watched) => [...watched, movie]);
+  };
+
+  //function to removie watched movie
+  const handleRemoveWatched = (id) => {
+    setWatched((watched) => watched.filter((m) => m.imdbID !== id));
+  };
   return (
     <>
       <NavBar>
@@ -90,12 +99,17 @@ export default function App() {
           {selectedId ? (
             <MovieDetails
               onMovieClose={handleCloseModal}
+              onAddWatched={handleAddWatched}
               selectedId={selectedId}
+              watched={watched}
             />
           ) : (
             <>
               <WatchedSummary watched={watched} />
-              <WatchedList watched={watched} />
+              <WatchedList
+                onRemoveWatched={handleRemoveWatched}
+                watched={watched}
+              />
             </>
           )}
         </Box>

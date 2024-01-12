@@ -15,6 +15,7 @@ const StarRating = ({
   maxRating = 5,
   color = "#fcc419",
   size = 48,
+  onSetRating,
 }) => {
   const textStyle = {
     lineHeight: "1",
@@ -28,6 +29,7 @@ const StarRating = ({
 
   const handleMovieRating = (rating) => {
     setRating(rating);
+    onSetRating(rating);
   };
 
   return (
